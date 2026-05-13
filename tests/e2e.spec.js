@@ -39,17 +39,17 @@ test('headerLogin', async ({ page }) => {
 
   await page.getByRole('link', {name: 'Samsung galaxy s6' }).click();
 
-  await expect(page.getByRole('button', {name: 'Add to cart'})).toBeVisible;
+  await expect(page.getByRole('link', {name: 'Add to cart'})).toBeVisible();
 
   await page.locator('//*[@id="tbodyid"]/div[2]/div/a').click();
 
   await page.locator('//*[@id="cartur"]').click();
 
-  await expect(page.getByRole('heading', {name: 'Product'})).toBeVisible;
+  await expect(page.getByRole('heading', {name: 'Product'})).toBeVisible();
 
   await page.locator('//*[@id="page-wrapper"]/div/div[2]/button').click();
 
-  await expect(page.getByRole('heading', {name: 'Place holder'})).toBeVisible;
+  await expect(page.getByRole('heading', {name: 'Place order'})).toBeVisible();
 
   await page.locator('//*[@id="name"]').fill('Salahuddin Nabil');
 
@@ -65,7 +65,7 @@ test('headerLogin', async ({ page }) => {
 
   await page.locator('//*[@id="orderModal"]/div/div/div[3]/button[2]').click();
 
-  await expect(page.getByRole('button', {name: 'OK'})).toBeVisible;
+  await expect(page.getByRole('button', {name: 'OK'})).toBeVisible();
 
   
 
